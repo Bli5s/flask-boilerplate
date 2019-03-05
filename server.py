@@ -3,10 +3,11 @@
 import os
 import json
 import logging
+import datetime
 from logging.handlers import RotatingFileHandler
 from flask import Flask, jsonify, request, send_file
 
-application = Flask(__name__, static_folder='build', static_url_path='')
+application = Flask(__name__, static_folder='./', static_url_path='')
 
 if not os.path.isdir('./log'):
     os.mkdir('./log')
